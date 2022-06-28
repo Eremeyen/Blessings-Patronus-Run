@@ -1,11 +1,12 @@
-from shutil import which
-from tkinter import W
 from PIL import Image
 import os
 from os import listdir
 from random import random
+import csv
 
 #attribute folders:
+
+#folder paths will have to change
 backgrounds = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Backgrounds"
 back_wings = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Back_Wings"
 tail = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Tail"
@@ -64,11 +65,14 @@ crown_names = {
 }
 
 horn_names = {
-
+    
 }
 
 orb_names = {
-
+    "PATRONUS ORBS 1.png":"Blue sOrbs",
+    "PATRONUS ORBS 2.png":"Purple Orbs",
+    "PATRONUS ORBS 3.png":"Cyan Orbs",
+    "PATRONUS ORBS 4.png":"Green Orbs"
 }
 
 #final images destination
@@ -76,7 +80,7 @@ finalImages = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Blessi
 
 #defining an empty images array which we'll use to come up with each final image
 images = []
-for i in range(len(os.listdir(r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run"))-2):
+for i in range(len(os.listdir(r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run"))-3):
     images.append("")
 
 
@@ -212,10 +216,21 @@ def whichOrbs():
 
 
 
-Metadata = {}
+Metadata = []
 
 while(bCounter < 116):
     blessing = {}
+
+    if(bCounter < 10):
+        id = "000" + str(bCounter)
+    elif(bCounter < 100):
+        id = "00" + str(bCounter)
+    elif(bCounter < 1000):
+        id = "0" + str(bCounter)
+    else:
+        id = str(bCounter)
+    blessing["id"] = int(id)
+
     backG = whichBackground()
     images[0] = Image.open(backgrounds + "/" + backG).convert("RGBA")
     blessing["Background"] = background_names[backG]
@@ -271,24 +286,23 @@ while(bCounter < 116):
         final_image = Image.alpha_composite(final_image,images[i])
     
     #saving the image with the correct name and directory
-    print(str(bCounter) + " images generated")
+    #print(str(bCounter) + " images generated")
     final_image.save(finalImages+"/Blessings Patronus " +str(bCounter)+".png")
     
-    if(bCounter < 10):
-        id = "000" + str(bCounter)
-    elif(bCounter < 100):
-        id = "00" + str(bCounter)
-    elif(bCounter < 1000):
-        id = "0" + str(bCounter)
-    else:
-        id = str(bCounter)
-    Metadata[id] = blessing
+    
+    Metadata.append(blessing)
 
 
     bCounter += 1
 
     
+#writing csv file
+main_info = ["id","Background","Back Wing","Tail","Body","Eyes","Accessory","Front Wing","Hair","Crown","Horn","Orbs"]
 
+with open("metadata.csv", "w") as csvfile:
+    writer = csv.DictWriter(csvfile,fieldnames= main_info)
+    writer.writeHeader()
+    writer.writerows(Metadata)
 
 
 
