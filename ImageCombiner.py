@@ -41,31 +41,65 @@ tail_names = {
     "PATRONUS TAIL 1.png":"Pink blue glow tail"
 }
 body_names = {
-
+    "PATRONUS BODY 1.png":"Blue Grace",
+    "PATRONUS BODY 2.png":"Violet Grace",
+    "PATRONUS BODY 3.png":"Midnight",
+    "PATRONUS BODY 4.png":"Sky"
 }
 
 eye_names = {
-
+    "PATRONUS EYE F1.png":"Female blue-green eyes",
+    "PATRONUS EYE F2.png":"Female blue eyes",
+    "PATRONUS EYE F3.png":"Female purple eyes",
+    "PATRONUS EYE F4.png":"Female green eyes",
+    "PATRONUS EYE M1.png":"Male blue-green eyes",
+    "PATRONUS EYE M2.png":"Male blue eyes",
+    "PATRONUS EYE M3.png":"Male purple eyes",
+    "PATRONUS EYE M4.png":"Male green eyes"
 }
 
 accessory_names = {
-
+    "PATRONUS ACC 1.png":"Gold necklace",
+    "PATRONUS ACC 2.png":"Gold tassles",
+    "PATRONUS ACC 3.png":"Silver necklace with blue pendant",
+    "PATRONUS ACC 4.png":"Black necklace",
+    "220329-0959-BOS LAYER.png":"none",
 }
 
 fWing_names = {
-
+    "PATRONUS FRONT WING 1.png":"Blue wings",
+    "PATRONUS FRONT WING 2.png":"Sky blue wings",
+    "PATRONUS FRONT WING 6.png":"Purple wings",
+    "PATRONUS FRONT WING 3.png":"Pink sparkle wings",
+    "PATRONUS FRONT WING 4.png":"Blue green glow wings",
+    "PATRONUS FRONT WING 5.png":"Purple blue glow wings"
 }
 
 hair_names = {
+    "PATRONUS HAIR 1.png":"White purple glow hair",
+    "PATRONUS HAIR 2.png":"Blue hair",
+    "PATRONUS HAIR 3.png":"Pink blue glow hair"
 
 }
 
 crown_names = {
-
+    "PATRONUS CROWN 1.png":"Navy crown",
+    "PATRONUS CROWN 2.png":"Blue crown",
+    "PATRONUS CROWN 3.png":"Light pink crown",
+    "PATRONUS CROWN 4.png":"Vibrant pink crown",
+    "PATRONUS CROWN 5.png":"Black crown",
+    "PATRONUS CROWN 6.png":"Purple crown"  
 }
 
 horn_names = {
-    
+    "PATRONUS HORN 1.png":"Light blue horn",
+    "PATRONUS HORN 2.png":"Purple horn",
+    "PATRONUS HORN 3.png":"Light pink horn",
+    "PATRONUS HORN 4.png":"Cyan horn",
+    "PATRONUS HORN 5.png":"Blue gradient horn",
+    "PATRONUS HORN 6.png":"Gold horn",
+    "PATRONUS HORN 7.png":"Blue sparkle horn"
+
 }
 
 orb_names = {
