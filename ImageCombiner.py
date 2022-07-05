@@ -7,17 +7,17 @@ import csv
 #attribute folders:
 
 #folder paths will have to change
-backgrounds = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Backgrounds"
-back_wings = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Back_Wings"
-tail = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Tail"
-bodies = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Bodies"
-eyes = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Eye"
-accessories = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\accessories"
-front_wings = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Front_Wings"
-hair = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Hair"
-crown = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\crown"
-horn = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Horn"
-orbs = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\orbs"
+backgrounds = r"Backgrounds"
+back_wings = r"Back_Wings"
+tail = r"Tail"
+bodies = r"Bodies"
+eyes = r"Eye"
+accessories = r"accessories"
+front_wings = r"Front_Wings"
+hair = r"Hair"
+crown = r"crown"
+horn = r"Horn"
+orbs = r"orbs"
 
 #dictionaries
 background_names = {
@@ -76,11 +76,11 @@ orb_names = {
 }
 
 #final images destination
-finalImages = r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run\Blessings"
+finalImages = r"Blessings"
 
 #defining an empty images array which we'll use to come up with each final image
 images = []
-for i in range(len(os.listdir(r"C:\Users\meren\OneDrive\Masaüstü\Blessings Patronus Run"))-3):
+for i in range(len(os.listdir("."))-3):
     images.append("")
 
 
